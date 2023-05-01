@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "752317713984",
+    "project_id": "shoeapp-c8adf",
+    "storage_bucket": "shoeapp-c8adf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:752317713984:android:33e75e675919fd5e3259a5",
+        "android_client_info": {
+          "package_name": "com.example.chatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "752317713984-ihbfiam3coejc3sciivsrfvpa3ogadgm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1NNcPQnD0tL3MeBipXmpYRSgxASgrI9w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "752317713984-ihbfiam3coejc3sciivsrfvpa3ogadgm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

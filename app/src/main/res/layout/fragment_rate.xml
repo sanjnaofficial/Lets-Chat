@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    android:id="@+id/ratingFrag"
+    android:background="#8DCBE6"
+    tools:context=".RateFragment">
+
+    <TextView
+        android:id="@+id/tvRate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rate Us"
+        android:textSize="40sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@color/red_color"
+        />
+
+    <RatingBar
+        android:layout_below="@+id/tvRate"
+        android:id="@+id/simpleRatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="1dp"
+        android:numStars="5"
+        android:rating="1.5"
+        android:progressTint="#F4E040"
+        android:stepSize="0.5"
+        />
+
+    <Button
+        android:id="@+id/btnRate"
+        android:layout_width="183dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/simpleRatingBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/btn_background"
+        android:padding="10dp"
+        android:text="Submit"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:gravity="center"
+        android:textSize="20sp"
+        android:text="Rating:"
+        android:layout_marginTop="60dp"
+        android:layout_below="@+id/btnRate"
+        android:id="@+id/tvRes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+</RelativeLayout>
