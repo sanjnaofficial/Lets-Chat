@@ -12,6 +12,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
+//signup page
 class SignUp : AppCompatActivity() {
 
     private lateinit var edtName: EditText
@@ -45,12 +46,12 @@ class SignUp : AppCompatActivity() {
     }
 
     private fun signUp(name: String, email: String, password: String) {
-    // loigic of creating user
+    // logic of creating user
 
         mAuth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                // code for jumping to home activity
+                // code for jumping to mainpage activity and adding user to database
                     addUserToDatabase(name,email,mAuth.currentUser?.uid!!)
 
                     val intent= Intent(this,MainPage::class.java)

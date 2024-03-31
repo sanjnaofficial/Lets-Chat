@@ -12,8 +12,6 @@ import com.google.firebase.ktx.Firebase
 
 class UserAdapter(val context: Context, val userList: ArrayList<User>): RecyclerView.Adapter<UserAdapter.UserViewHolder>() {
 
-
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserViewHolder {
         val view: View = LayoutInflater.from(context).inflate(R.layout.user_layout,parent,false)
         return UserViewHolder(view)

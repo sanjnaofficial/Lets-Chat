@@ -61,11 +61,13 @@ class MainPage : AppCompatActivity() {
                 for (postSnapshot in snapshot.children) {
                     val currentUser = postSnapshot.getValue(User::class.java)
 
+                    // for name of current user
                     if(mAuth.currentUser?.uid==currentUser?.uid){
                         currentUser?.let {
                             nameTextView.text = it.name
                         }
                     }
+                    //for contact list
                     if (mAuth.currentUser?.uid != currentUser?.uid) {
                         userList.add(currentUser!!)
                     }
@@ -93,7 +95,7 @@ class MainPage : AppCompatActivity() {
         val email = currentUser?.email
         emailTextView.text = email
 
-
+        // nav bar items
         navView.setNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.nav_home -> {
@@ -166,6 +168,7 @@ class MainPage : AppCompatActivity() {
 
     }
 
+    //for logout option menu
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu,menu)
         return super.onCreateOptionsMenu(menu)
