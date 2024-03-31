@@ -7,7 +7,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
-
+// login page
 class HomeActivity : AppCompatActivity() {
     private lateinit var edtEmail: EditText
     private lateinit var edtPassword: EditText
@@ -20,7 +20,7 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        supportActionBar?.hide()
+        supportActionBar?.hide()//hide action-bar
 
         mAuth = FirebaseAuth.getInstance()
 
@@ -29,6 +29,7 @@ class HomeActivity : AppCompatActivity() {
         btnLogin = findViewById(R.id.btnLogin)
         btnSignUp = findViewById(R.id.btnSignUp)
 
+        //explicit intent
         btnSignUp.setOnClickListener {
             val intent = Intent(this, SignUp::class.java)
             startActivity(intent)
@@ -54,7 +55,7 @@ class HomeActivity : AppCompatActivity() {
                     startActivity(intent)
 
                 } else {
-                    Toast.makeText(this, "User Already exists", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Either credentials are wrong or User Already exists", Toast.LENGTH_SHORT).show()
                 }
             }
     }

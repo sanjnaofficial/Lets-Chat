@@ -26,11 +26,12 @@ class MessageAdapter(val context: Context, val messageList: ArrayList<Message>):
         }
     }
 
+    //update the contents of the itemView to reflect the item at the given position for recycler view.
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
 
         val currentMessage = messageList[position]
         if(holder.javaClass ==SentViewHolder::class.java){
-            //dp stuff for sent view holder
+            //do stuff for sent view holder
 
             val viewHolder= holder as SentViewHolder
             holder.sentMessage.text = currentMessage.message
